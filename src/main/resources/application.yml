@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gujiedmc?autoReconnect=true&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+pagehelper:
+  helper-dialect: mysql
+  reasonable: false
+  support-methods-arguments: true
+  page-size-zero: count=countSql
+logging:
+  level:
+    com.gujiedmc.study.dataimportexport.dao.UserMapper: debug
+server:
+  port: 8081
